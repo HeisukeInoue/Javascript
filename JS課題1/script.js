@@ -13,17 +13,17 @@ const bool = false;
 console.log(bool);
 
 /*4.未定義の状態で変数を宣言してください*/
-let x;
-console.log(x);
+let hoge;
+console.log(hoge);
 
 /*5.null を格納する変数を宣言してください*/
 const number = null;
 console.log(number);
 
 /*6.文字列の配列を作ってみよう*/
-const ourname = ["田中", "佐藤", "久保田", "鈴木", "河本"];
-for (let i = 0; i < ourname.length; i++){
-  console.log(ourname[i]);
+const ourName = ["田中", "佐藤", "久保田", "鈴木", "河本"];
+for (let i = 0; i < ourName.length; i++){
+  console.log(ourName[i]);
 }
 
 /*7.オブジェクトを宣言してみよう*/
@@ -54,7 +54,7 @@ simply(157);
 function calc(a,b) {
   return a + b;
 };
-let result = calc(123,1234);
+const result = calc(123,1234);
 console.log(result);
 
 /*5.文字列を結合する関数を作りましょう*/
