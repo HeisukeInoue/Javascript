@@ -37,8 +37,7 @@ const numA = 8000;
 const numB = 12000;
 if (numA > numB) {
   console.log(numA);
-}
-else {
+} else {
   console.log(numB);
 }
 
@@ -50,14 +49,17 @@ const moneyC = 3000;
 if (moneyA > moneyB){
   if (moneyC > moneyA){
     console.log(moneyC);
+  } else {
+    console.log(moneyA);
   }
-  else {console.log(moneyA);}
 }
+
 else {
   if (moneyC > moneyB){
     console.log(moneyC);
+  } else {
+    console.log(moneyB);
   }
-  else {console.log(moneyB);}
 }
 
 /*3.点数に応じてメッセージをアラート表示してください*/
@@ -65,14 +67,11 @@ const point = 100;
 
 if (point === 100) {
   alert("満点！！");
-} 
-else if (point >= 80) {
+} else if (point >= 80) {
   alert("合格です");
-} 
-else if (point <=  30) {
+} else if (point <=  30) {
   alert("赤点です");
-} 
-else {
+} else {
   alert("不合格です");
 }
 
@@ -117,28 +116,27 @@ for (let i = 0; i < fruits.length; i++) {
 }
 
 /*3.配列の合計を計算してください*/
-const Num = [1, 2, 3,];
+const numbersOne = [1, 2, 3,];
 let sumNum = 0;
-for (let i = 0; i < Num.length; i++) {
-  sumNum += Num[i];
+for (let i = 0; i < numbersOne.length; i++) {
+  sumNum += numbersOne[i];
 }
 console.log(sumNum);
 
 /*4.配列を分割してください*/
 const numAndStrings = [1, 'hoge', 2, 'huga', 3, 'piyo'];
-const string = [];
+const strings = [];
 const numbers = [];
 
 for (let i = 0; i < numAndStrings.length; i++){
   const targetContent = numAndStrings[i];
   if (typeof targetContent === "string"){
-    string.push(targetContent);
-  }
-  else {
+    strings.push(targetContent);
+  } else {
     numbers.push(targetContent);
   }
 }
-console.log(string);
+console.log(strings);
 console.log(numbers);
 
 /*5.奇数のみ足し算してください*/
@@ -181,9 +179,7 @@ for (let i = combiYears; i <= maxYears; i++){
 /*foreach文：コレクションの要素を順番に処理する時に使う*/
 const championHistory = ["ミルクボーイ", "マジカルラブリー", "ウエストランド", "錦鯉", "令和ロマン"];
 const imadaKouji = "優勝は!!";
-championHistory.forEach(function(value){
-  console.log(imadaKouji + value);
-});
+championHistory.forEach((value) => console.log(imadaKouji + value));
 
 /*while文：条件を満たしている間繰り返す*/
 let loveScale = 0;
