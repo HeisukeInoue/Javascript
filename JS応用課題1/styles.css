@@ -1,0 +1,61 @@
+.parent-container {
+  display: flex;
+}
+
+.container-one {
+  height: 95vh;
+  width: 80%;
+}
+
+.container-two {
+  width: 20%;
+}
+
+.player.one {
+  border: solid;
+  height: 20%;
+  text-align: center;
+}
+
+.player.two {
+  border: solid;
+  height: 20%;
+  text-align: center;
+}
+
+.dicearea {
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  height: 40%;
+  align-items: center;
+  ;
+}
+
+.dice.one {
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  height: 50%;
+  width: 15%;
+  text-align: center;
+}
+
+.dice.two {
+  border: solid;
+  height: 50%;
+  width: 15%;
+  text-align: center;
+}
+
+.commandarea {
+  display: flex;
+  border: solid;
+  height: 20%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.letsgo {
+  border: solid;
+}
