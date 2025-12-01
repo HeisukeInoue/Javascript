@@ -19,7 +19,9 @@ const nameAlert = document.getElementById("nameResult");
 nameAlert.innerText = nameError;
 document.getElementById("name").addEventListener("input", function(){
   const regex = /^[^ -~｡-ﾟ]+$/;
-  if ((regex.test(nameInput.value)) && nameInput.value.trim() !== "") {
+  const originStr = nameInput.value;
+  const trimStr = nameInput.value.trim();
+  if ((regex.test(originStr)) && trimStr !== "" && originStr[0] === trimStr[0] && originStr.slice(-1) === trimStr.slice(-1)) {
     nameAlert.innerText = "";
   } else {
     nameAlert.innerText = nameError;
@@ -32,11 +34,11 @@ const ageError = "正しい年齢を入力してください";
 const ageAlert = document.getElementById("ageResult");
 ageAlert.innerText = ageError;
 document.getElementById("age").addEventListener("input", function(){
-    if (isNaN(ageInput.value) || ageInput.value.trim() === "") {
-      ageAlert.innerText = ageError;
-    } else {
-      ageAlert.innerText = "";
-    };
+  if (isNaN(ageInput.value) || ageInput.value.trim() === "") {
+    ageAlert.innerText = ageError;
+  } else {
+    ageAlert.innerText = "";
+  };
 })
 
 /*3.メールアドレス*/
@@ -45,18 +47,18 @@ const emailError = "正しいメールアドレスを入力してください";
 const emailAlert = document.getElementById("emailResult");
 emailAlert.innerText = emailError;
 document.getElementById("email").addEventListener("input", function(){
-    const regexOne = /^\w+@\w+\.\w+$/;
-    const regexTwo = /^[ -~｡-ﾟ]+$/;
+  const regexOne = /^\w+@\w+\.\w+$/;
+  const regexTwo = /^[ -~｡-ﾟ]+$/;
 
-    const isOneTrue = regexOne.test(emailInput.value);
-    const isTwoTrue = regexTwo.test(emailInput.value);
+  const isOneTrue = regexOne.test(emailInput.value);
+  const isTwoTrue = regexTwo.test(emailInput.value);
 
-    if (!isOneTrue||!isTwoTrue) {
-      emailAlert.innerText = emailError;
-    } else {
-      emailAlert.innerText = "";
-    };
-  })
+  if (!isOneTrue||!isTwoTrue) {
+    emailAlert.innerText = emailError;
+  } else {
+    emailAlert.innerText = "";
+  };
+})
 
 /*4.電話番号*/
 const phoneInput = document.getElementById("phone");
@@ -64,12 +66,12 @@ const phoneError = "正しい電話番号を入力してください";
 const phoneAlert = document.getElementById("phoneResult");
 phoneAlert.innerText = phoneError;
 document.getElementById("phone").addEventListener("input", function(){
-    const isOneTrue = phoneInput.value.trim().length === 11;
-    const isTwoTrue = !isNaN(phoneInput.value) && phoneInput.value.trim() !== "";
+  const isOneTrue = phoneInput.value.trim().length === 11;
+  const isTwoTrue = !isNaN(phoneInput.value) && phoneInput.value.trim() !== "";
 
-    if (!isOneTrue||!isTwoTrue) {
-      phoneAlert.innerText = phoneError;
-    } else {
-      phoneAlert.innerText = "";
-    };
-  })
+  if (!isOneTrue||!isTwoTrue) {
+    phoneAlert.innerText = phoneError;
+  } else {
+    phoneAlert.innerText = "";
+  };
+})
