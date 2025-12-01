@@ -142,7 +142,7 @@ console.log(numbers);
 let oddSum = 0;
 for (let i = 1; i <= 100; i++){
   if (!(i % 2)) continue;
-  else oddSum += i;
+  oddSum += i;
 }
 console.log(oddSum);
 
@@ -234,7 +234,5 @@ const robots = [
   { id: 111, hasSubmitted: false },
   { id: 268, hasSubmitted: true },
 ]
-let finalResult = robots.sort(function(a, b) {
-  return (a.id < b.id) ? -1 : 1;
-});
+let finalResult = robots.sort((a, b) => {return (a.id - b.id)});
 console.log(finalResult);
