@@ -52,9 +52,7 @@ if (moneyA > moneyB){
   } else {
     console.log(moneyA);
   }
-}
-
-else {
+} else {
   if (moneyC > moneyB){
     console.log(moneyC);
   } else {
@@ -86,6 +84,7 @@ switch (day) {
     break;
   case "kanagawa":
     console.log("神奈川");
+    break;
   default:
     console.log("未確認");
 }  
@@ -171,7 +170,7 @@ let combiYears = 1;
 const maxYears = 15;
 for (let i = combiYears; i <= maxYears; i++){
   console.log("会場を爆笑の渦に包んだ");
-  if (i == maxYears) {
+  if (i === maxYears) {
     console.log("M-1グランプリ優勝!!")
   }
 }
