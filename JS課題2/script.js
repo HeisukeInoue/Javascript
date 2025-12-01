@@ -150,7 +150,7 @@ console.log(oddSum);
 
 /*1.foreachを使ってループ処理を試してみましょう*/
 const fruit = ['apple', 'banana', 'cat'];
-fruit.forEach(function(value){
+fruit.forEach((value) => {
   console.log(value);
 });
 
