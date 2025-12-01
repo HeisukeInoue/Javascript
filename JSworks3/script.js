@@ -18,13 +18,13 @@ const nameError = "正しい名前を入力してください";
 const nameAlert = document.getElementById("nameResult");
 nameAlert.innerText = nameError;
 document.getElementById("name").addEventListener("input", function(){
-    const regex = /^[^ -~｡-ﾟ]+$/;
-    if ((regex.test(nameInput.value))) {
-      nameAlert.innerText = "";
-    } else {
-      nameAlert.innerText = nameError;
-    };
-  })
+  const regex = /^[^ -~｡-ﾟ]+$/;
+  if ((regex.test(nameInput.value)) && nameInput.value.trim() !== "") {
+    nameAlert.innerText = "";
+  } else {
+    nameAlert.innerText = nameError;
+  };
+})
 
 /*2.年齢*/
 const ageInput = document.getElementById("age");
@@ -46,14 +46,12 @@ const emailAlert = document.getElementById("emailResult");
 emailAlert.innerText = emailError;
 document.getElementById("email").addEventListener("input", function(){
     const regexOne = /^\w+@\w+\.\w+$/;
-    const regexTwo = /@/;
-    const regexThree = /^[ -~｡-ﾟ]+$/;
+    const regexTwo = /^[ -~｡-ﾟ]+$/;
 
     const isOneTrue = regexOne.test(emailInput.value);
     const isTwoTrue = regexTwo.test(emailInput.value);
-    const isThreeTrue = regexThree.test(emailInput.value);
 
-    if (!isOneTrue||!isTwoTrue||!isThreeTrue) {
+    if (!isOneTrue||!isTwoTrue) {
       emailAlert.innerText = emailError;
     } else {
       emailAlert.innerText = "";
@@ -66,13 +64,12 @@ const phoneError = "正しい電話番号を入力してください";
 const phoneAlert = document.getElementById("phoneResult");
 phoneAlert.innerText = phoneError;
 document.getElementById("phone").addEventListener("input", function(){
-    const isOneTrue = phoneInput.value.length === 11;
+    const isOneTrue = phoneInput.value.trim().length === 11;
     const isTwoTrue = !isNaN(phoneInput.value) && phoneInput.value.trim() !== "";
-    
+
     if (!isOneTrue||!isTwoTrue) {
       phoneAlert.innerText = phoneError;
     } else {
       phoneAlert.innerText = "";
     };
   })
-
