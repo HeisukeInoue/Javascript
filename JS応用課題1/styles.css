@@ -15,12 +15,14 @@
   border: solid;
   height: 20%;
   text-align: center;
+  align-content: center;
 }
 
 .player.two {
   border: solid;
   height: 20%;
   text-align: center;
+  align-content: center;
 }
 
 .dicearea {
@@ -29,7 +31,6 @@
   border: solid;
   height: 40%;
   align-items: center;
-  ;
 }
 
 .dice.one {
@@ -42,6 +43,8 @@
 }
 
 .dice.two {
+  display: flex;
+  flex-direction: column;
   border: solid;
   height: 50%;
   width: 15%;
@@ -58,4 +61,15 @@
 
 .letsgo {
   border: solid;
+  width: 33%;
+  height: 100%;
+}
+
+.resultText {
+  border: solid;
+  width: 33%;
+  height: 100%;
+  text-align: center;
+  align-content: center;
+  display: none;
 }
