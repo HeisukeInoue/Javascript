@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>JS応用課題1</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body>
+    <div class="parent-container">
+      <div class="container-one">
+        <div class="player one">プレイヤー１</div>
+
+        <div class="dicearea">
+          <div class="dice one">
+            <img src="https://chicodeza.com/wordpress/wp-content/uploads/saikoro-illust1.png" alt="サイコロの1" id="diceOne">
+          </div>
+          <div class="dice two">
+            <img src="https://chicodeza.com/wordpress/wp-content/uploads/saikoro-illust1.png" alt="サイコロの1" id="diceTwo">
+          </div>
+        </div>
+
+        <div class="player two">プレイヤー2</div>
+
+        <div class="commandarea">
+          <button class="letsgo" id="gobutton">勝負</button>
+          <div class="resultText" id="result"></div>
+        </div>
+      </div>
+
+      <div class="container-two">
+        <div class="battleinfo">
+          <div id="round">ラウンド数: 0ラウンド</div>
+          <div id="pOne">プレイヤー1: 0ポイント</div>
+          <div id="pTwo">プレイヤー2: 0ポイント</div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+
+</html>
