@@ -10,6 +10,7 @@ const imageFolder = [
 let roundCount = 0;
 let firstWins = 0;
 let secondWins = 0; 
+const calcForDice = 6;
 
 const round = document.getElementById("round");
 const playerOne = document.getElementById("pOne");
@@ -17,8 +18,8 @@ const playerTwo = document.getElementById("pTwo");
 const button = document.getElementById("gobutton");
 
 button.addEventListener("click", () => {
-  const diceNumOne = Math.floor(Math.random() * 6);
-  const diceNumTwo = Math.floor(Math.random() * 6);
+  const diceNumOne = Math.floor(Math.random() * calcForDice);
+  const diceNumTwo = Math.floor(Math.random() * calcForDice);
   const diceOne = document.getElementById("diceOne")
   const diceTwo = document.getElementById("diceTwo")
   diceOne.src = imageFolder[diceNumOne];
