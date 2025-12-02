@@ -10,7 +10,8 @@ const imageFolder = [
 let roundCount = 0;
 let firstWins = 0;
 let secondWins = 0; 
-const calcForDice = 6;
+const CALC_FOR_DICE = 6;
+const MAX_ROUND = 3;
 
 const round = document.getElementById("round");
 const playerOne = document.getElementById("pOne");
@@ -18,8 +19,8 @@ const playerTwo = document.getElementById("pTwo");
 const button = document.getElementById("gobutton");
 
 button.addEventListener("click", () => {
-  const diceNumOne = Math.floor(Math.random() * calcForDice);
-  const diceNumTwo = Math.floor(Math.random() * calcForDice);
+  const diceNumOne = Math.floor(Math.random() * CALC_FOR_DICE);
+  const diceNumTwo = Math.floor(Math.random() * CALC_FOR_DICE);
   const diceOne = document.getElementById("diceOne")
   const diceTwo = document.getElementById("diceTwo")
   diceOne.src = imageFolder[diceNumOne];
@@ -37,7 +38,7 @@ button.addEventListener("click", () => {
   playerOne.innerText = "プレイヤー1: " + firstWins + "ポイント";
   playerTwo.innerText = "プレイヤー2: " + secondWins + "ポイント";
 
-  if(roundCount === 3){
+  if(roundCount === MAX_ROUND){
     button.disabled = true;
     const result = document.getElementById("result");
     if (firstWins > secondWins){
