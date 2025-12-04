@@ -1,0 +1,45 @@
+.container {
+  height: 80vh;
+}
+
+.balls {
+  display: flex;
+  width: 70%;
+  height: 30%;
+}
+
+.ball {
+  display: flex;
+  border: solid;
+  width: 25%;
+  align-items: center;
+}
+
+.boxes {
+  display: flex;
+  width: 70%;
+  height: 60%;
+}
+
+.box {
+  border: solid;
+  width: 25%;
+}
+
+.cursor {
+  width: 25%;
+  height: 25%;
+}
+
+.mainball {
+  width: 50%;
+  height: 50%;
+}
+
+.ballimage {
+  width: 100%;
+}
+
+.cursorimage, .na-cursorimage {
+  width: 100%;
+}
