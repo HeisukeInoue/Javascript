@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  border: solid;
+  margin-top: 20vh;
+  margin-bottom: 40vh;
+}
+
+.maincontainer {
+  border: solid;
+}
+
+.subcontainer {
+  border: solid;
+  margin-left: 50%;
+}
+
+.redalert {
+  color: crimson;
+}
+
+.loadings {
+  width: 100px;
+  height: 100px;
+}
