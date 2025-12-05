@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html lang="ja">
-
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>非同期処理課題2</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
   <body>
     <div class="container">
       <div class="maincontainer">
         <h1 class="title">ポケモン検索</h1>
-        <input type="text" name="text" class="pokemonIDinput" placeholder="IDを入力">
+        <input
+          type="text"
+          name="text"
+          id="pokeID"
+          class="pokemonIDinput"
+          placeholder="IDを入力"
+        />
         <button class="searchbutton" id="search">検索</button>
+        <p id="errorText" class="redalert"></p>
+        <div id="infos">
+          <ul class="information" id="info">
+            <li>
+              <img id="img"></img>
+            </li>
+            <li id="name"></li>
+            <li id="id"></li>
+            <li id="types"></li>
+            <li id="height"></li>
+            <li id="weight"></li>
+          </ul>
+        </div>
       </div>
       <div class="subcontainer">
         <h2 class="searchlog">検索履歴一覧</h2>
+        <p id="initiallog"></p>
+        <ul class="information" id="log">
+        </ul>
       </div>
     </div>
     <script src="script.js"></script>
   </body>
-
 </html>
